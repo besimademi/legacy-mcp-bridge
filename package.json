@@ -1,0 +1,27 @@
+{
+  "name": "legacy-mcp-bridge",
+  "version": "0.1.0",
+  "description": "Strangler-pattern modernization of a legacy billing module, exposed to AI agents through a typed MCP server.",
+  "type": "module",
+  "bin": { "legacy-mcp-bridge": "dist/src/index.js" },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": ["mcp", "model-context-protocol", "strangler-pattern", "hexagonal-architecture", "ai-agents", "typescript"],
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
